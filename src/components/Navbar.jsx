@@ -6,18 +6,36 @@ const Container = styled.div`
     background-color: #FDF7E4
 `
 const Wrapper = styled.div`
-    padding: 10px 20px
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
 `
-const Left = styled.div``
-const Center = styled.div``
-const Right = styled.div``
+const Left = styled.div`
+    flex: 1;
+`
+const Center = styled.div`
+    flex: 1;
+`
+const Right = styled.div`
+    flex: 1
+`
+
+const Language = styled.span`
+    font-size: 14px;
+    cursor: pointer;
+`
+
+
 
 const Navbar = () => {
   return (
     <Container>
         <Wrapper>
-            <Left>left</Left>
-            <Center>center</Center>
+            <Left>
+                <Language>EN</Language>
+            </Left>
+            <Center>
+            center</Center>
             <Right>right</Right>
         </Wrapper>
     </Container>
