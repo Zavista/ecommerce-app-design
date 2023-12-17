@@ -1,7 +1,10 @@
 import React from 'react'
+import Home from './pages/Home'
 
-export default function App() {
+const App = () => {
   return (
-    <div>App</div>
+    <Home></Home>
   )
 }
+
+export default App
