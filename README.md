@@ -20,3 +20,6 @@ This repository hosts the development of an eCommerce application built using Re
 
 - **Coffee API**: The data used in this project is sourced from [Fake Coffee API](https://fake-coffee-api.vercel.app/). Thank you for providing the coffee-related information used in this application.
 - **Educational Influence**: This project drew inspiration from an educational tutorial series by [Lama Dev](https://www.youtube.com/watch?v=c1xTDSIXit8) on YouTube. Although the tutorial focused on a clothing eCommerce site, the guidance and techniques provided were instrumental in shaping certain aspects of this coffee-based application.
+
+Google Font Urbanist
+Material UI Serch Icon
