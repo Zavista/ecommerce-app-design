@@ -8,14 +8,14 @@ export const sliderItems = [
     },
     {
         id: 2,
-        img: "https://iili.io/H8Y7WEg.webp",
+        img: "https://iili.io/H8Y7r4s.webp",
         title: "Harvest Brews",
         desc: "Fall for Flavor! Enjoy a Special 30% Discount on Fall Flavors.",
         bg: "#fcf1ed",
     },
     {
         id: 3,
-        img: "https://iili.io/H8Y7WEg.webp",
+        img: "https://iili.io/H8Y7Opp.webp",
         title: "Frosty Deals",
         desc: "Chill Out in Style! Enjoy a Special 30% Discount on Winter Flavors.",
         bg: "#fbf0f4",
