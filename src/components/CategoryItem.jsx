@@ -3,8 +3,12 @@ import styled from "styled-components"
 const Container = styled.div`
   flex: 1;
   margin: 0px;
+  margin-bottom: 1%;
   height: 50vh;
-  position: relative;
+  position: relative;  
+  &:hover{
+    transform: scale(1.1);
+  }
 `
 const Image = styled.img`
   width: 100%;
