@@ -21,3 +21,31 @@ export const sliderItems = [
         bg: "#fbf0f4",
     },
 ]
+
+export const categories = [
+    {
+        id: 1,
+        img: "../assets/centralamerica.png",
+        title: "Central America",
+    },
+    {
+        id: 2,
+        img: "../assets/southamerica.png",
+        title: "South America",
+    },
+    {
+        id: 3,
+        img: "../assets/africa.png",
+        title: "Africa",
+    },
+    {
+        id: 4,
+        img: "../assets/asiapacific.png",
+        title: "Asia Pacific",
+    },
+    {
+        id: 5,
+        img: "../assets/middleeast.png",
+        title: "Middle East",
+    },
+]
