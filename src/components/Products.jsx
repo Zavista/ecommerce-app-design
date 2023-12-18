@@ -2,7 +2,6 @@ import styled from "styled-components"
 import { useEffect, useState } from "react";
 import Product from "./Product"
 
-
 const Container = styled.div`
     padding: 20px;
     display: flex;
@@ -23,7 +22,6 @@ const Products = () => {
 
     fetchData();
   }, []);
-
   return (
     <Container>
         {popularItems.map(item=>(
