@@ -8,6 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  overflow: hidden;
 `
 const CategoryContainer = styled.div`
     display: flex;
