@@ -5,6 +5,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Container = styled.div`
     height: 60px;
+    color: #3E2723;
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
@@ -72,7 +73,7 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input></Input>
-            <SearchIcon style={{color: "gray", fontSize:16}}></SearchIcon>
+            <SearchIcon style={{fontSize:16}}></SearchIcon>
           </SearchContainer>
         </Left>
         <Center><Logo>Brewtiful</Logo></Center>
