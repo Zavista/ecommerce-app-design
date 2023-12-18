@@ -34,8 +34,8 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition: all 1.5s ease; 
-  transform: translateX(${props=> props.slideIndex * -100}vw)
+  transition: all 1.5s ease;
+  transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -43,7 +43,7 @@ const Slide = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: ${props => props.bg};
+  background-color: ${(props) => props.bg};
 `;
 const ImageContainer = styled.div`
   flex: 1;
@@ -62,7 +62,7 @@ const Title = styled.h1`
 `;
 const Description = styled.p`
   margin: 50px 0px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   letter-spacing: 2px;
 `;
@@ -74,45 +74,40 @@ const Button = styled.button`
   letter-spacing: 2px;
 `;
 
-
 const Slider = () => {
-    const [slideIndex, setSlideIndex] = useState(0);
-    const handleClick = (direction) => {
-        if (direction==="left"){
-            setSlideIndex(slideIndex > 0 ? slideIndex - 1: 2);
-        }
-        else{
-            setSlideIndex(slideIndex < 2 ? slideIndex + 1: 0);
-        }
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
+  };
 
-
-    return (
-        <Container>
-        <Arrow direction="left" onClick={() => handleClick("left")}>
-            <KeyboardArrowLeftIcon></KeyboardArrowLeftIcon>
-        </Arrow>
-        <Wrapper slideIndex={slideIndex}>
-            {sliderItems.map(item=>(
-            <Slide bg={item.bg} key={item.id}>
-                <ImageContainer>
-                    <Image src={item.img}></Image>
-                </ImageContainer>
-                <InfoContainer>
-                    <Title>{item.title}</Title>
-                    <Description>
-                        {item.desc}
-                    </Description>
-                    <Button>Shop Now</Button>
-                </InfoContainer>
-            </Slide>                
-            ))}
-        </Wrapper>
-        <Arrow direction="right" onClick={() => handleClick("right")}>
-            <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
-        </Arrow>
-        </Container>
-    );
+  return (
+    <Container>
+      <Arrow direction="left" onClick={() => handleClick("left")}>
+        <KeyboardArrowLeftIcon style={{ fontSize: '4em' }} ></KeyboardArrowLeftIcon>
+      </Arrow>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg} key={item.id}>
+            <ImageContainer>
+              <Image src={item.img}></Image>
+            </ImageContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Description>{item.desc}</Description>
+              <Button>Shop Now</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
+      </Wrapper>
+      <Arrow direction="right" onClick={() => handleClick("right")}>
+        <KeyboardArrowRightIcon style={{ fontSize: '4em' }}></KeyboardArrowRightIcon>
+      </Arrow>
+    </Container>
+  );
 };
 
 export default Slider;
