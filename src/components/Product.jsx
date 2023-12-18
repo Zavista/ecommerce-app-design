@@ -8,7 +8,6 @@ const Container = styled.div`
     margin: 5px;
     min-width: 280px;
     height: 350px;
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,22 +15,44 @@ const Container = styled.div`
     position: relative;
 `
 const Circle = styled.div`
-    
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: lightblue;
+    position: absolute;
 `
 const Image = styled.img`
     height: 100%;
-    border: 1px solid blue;
+    z-index: 2;
 `
 
 const Info = styled.div`
     position: absolute;
     top: 0; 
     left: 0;
-    border: 1px solid green;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
 `
 const Icon = styled.div`
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    &:hover{
+        background-color: lightblue;
+        transform: scale(1.5);
+    }
+    
 `
 const Product = (item) => {
     return (
@@ -41,9 +62,13 @@ const Product = (item) => {
             <Info>
                 <Icon>
                     <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
-                    <SearchOutlinedIcon></SearchOutlinedIcon>
-                    <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
                 </Icon>
+                <Icon>
+                    <SearchOutlinedIcon></SearchOutlinedIcon>
+                </Icon>
+                <Icon>
+                    <FavoriteBorderOutlinedIcon></FavoriteBorderOutlinedIcon>
+                </Icon>               
             </Info>
         </Container>
     )
