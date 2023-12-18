@@ -38,6 +38,7 @@ const Slide = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: ${props => props.bg};
 `;
 const ImageContainer = styled.div`
   flex: 1;
@@ -71,11 +72,11 @@ const Button = styled.button`
 const Slider = () => {
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <KeyboardArrowLeftIcon></KeyboardArrowLeftIcon>
       </Arrow>
       <Wrapper>
-        <Slide>
+        <Slide bg="#fcf1ed">
           <ImageContainer>
             <Image src="https://iili.io/H8Y78Qt.webp"></Image>
           </ImageContainer>
@@ -87,7 +88,7 @@ const Slider = () => {
             <Button>Shop Now</Button>
           </InfoContainer>
         </Slide>
-        <Slide>
+        <Slide bg="#f4fafd">
           <ImageContainer>
             <Image src="https://iili.io/H8Y78Qt.webp"></Image>
           </ImageContainer>
@@ -99,7 +100,7 @@ const Slider = () => {
             <Button>Shop Now</Button>
           </InfoContainer>
         </Slide>
-        <Slide>
+        <Slide bg="#f9dafe">
           <ImageContainer>
             <Image src="https://iili.io/H8Y78Qt.webp"></Image>
           </ImageContainer>
@@ -111,7 +112,7 @@ const Slider = () => {
             <Button>Shop Now</Button>
           </InfoContainer>
         </Slide>
-        <Slide>
+        <Slide bg="#ef5a69">
           <ImageContainer>
             <Image src="https://iili.io/H8Y78Qt.webp"></Image>
           </ImageContainer>
@@ -124,7 +125,7 @@ const Slider = () => {
           </InfoContainer>
         </Slide>
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick("right")}>
         <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
       </Arrow>
     </Container>
