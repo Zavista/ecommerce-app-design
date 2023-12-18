@@ -2,8 +2,13 @@ import styled from "styled-components"
 
 const Container = styled.div`
     height: 30px;
-    background-color: tan;
-    color: brown;
+    background-color: #3E2723;
+    color: #D7CCC8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
 `
 
 const Announcement = () => {
