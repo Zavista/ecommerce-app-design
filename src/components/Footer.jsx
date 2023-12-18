@@ -35,10 +35,26 @@ const SocialIcon = styled.div`
 
 const Center = styled.div`
   flex: 1;
+  padding: 20px;
 `;
+const Title = styled.h3`
+    margin-bottom: 20px;
+`
+const List = styled.ul`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+`
+const ListItem = styled.li`
+    width: 50%;
+    margin-bottom: 10px;
+`
 
 const Right = styled.div`
   flex: 1;
+  padding: 20px;
 `;
 
 
@@ -67,7 +83,17 @@ const Footer = () => {
           </SocialIcon>
         </SocialContainer>
       </Left>
-      <Center></Center>
+      <Center>
+        <Title>Useful Links</Title>
+        <List>
+            <ListItem>Home</ListItem>
+            <ListItem>Products</ListItem>
+            <ListItem>Cart</ListItem>
+            <ListItem>My Account</ListItem>
+            <ListItem>Order Tracking</ListItem>
+            <ListItem>Terms</ListItem>
+        </List>
+      </Center>
       <Right></Right>
     </Container>
   );
