@@ -16,6 +16,7 @@ const Info = styled.div`
     justify-content: center;
     z-index: 3;
     transition: all 0.5s ease;
+    cursor: pointer;
 `
 
 const Container = styled.div`
