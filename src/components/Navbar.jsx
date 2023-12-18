@@ -78,6 +78,7 @@ const Navbar = () => {
         </Left>
         <Center><Logo>Brewtiful</Logo></Center>
         <Right>
+            <MenuItem>Products</MenuItem>
             <MenuItem>Register</MenuItem>
             <MenuItem>Sign In</MenuItem>
             <Badge badgeContent={4} color="primary">
