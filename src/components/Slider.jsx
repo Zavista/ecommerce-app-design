@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { useState } from "react";
+import { sliderItems } from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -26,6 +28,7 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
@@ -69,67 +72,38 @@ const Button = styled.button`
   letter-spacing: 2px;
 `;
 
+
 const Slider = () => {
-  return (
-    <Container>
-      <Arrow direction="left" onClick={() => handleClick("left")}>
-        <KeyboardArrowLeftIcon></KeyboardArrowLeftIcon>
-      </Arrow>
-      <Wrapper>
-        <Slide bg="#fcf1ed">
-          <ImageContainer>
-            <Image src="https://iili.io/H8Y78Qt.webp"></Image>
-          </ImageContainer>
-          <InfoContainer>
-            <Title>Summer Sale</Title>
-            <Description>
-                Don&apos;t Compromise on Style! Get A Flat 30% Off For New Arrivals
-            </Description>
-            <Button>Shop Now</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="#f4fafd">
-          <ImageContainer>
-            <Image src="https://iili.io/H8Y78Qt.webp"></Image>
-          </ImageContainer>
-          <InfoContainer>
-            <Title>Summer Sale</Title>
-            <Description>
-              Don&apos;t Compromise on Coffee! Get A Flat 30% On Everything
-            </Description>
-            <Button>Shop Now</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="#f9dafe">
-          <ImageContainer>
-            <Image src="https://iili.io/H8Y78Qt.webp"></Image>
-          </ImageContainer>
-          <InfoContainer>
-            <Title>Summer Sale</Title>
-            <Description>
-              Don&apos;t Compromise on Style! Get A Flat 30% Off For New Arrivals
-            </Description>
-            <Button>Shop Now</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="#ef5a69">
-          <ImageContainer>
-            <Image src="https://iili.io/H8Y78Qt.webp"></Image>
-          </ImageContainer>
-          <InfoContainer>
-            <Title>Summer Sale</Title>
-            <Description>
-              Don&apos;t Compromise on Coffee! Get A Flat 30% On Everything
-            </Description>
-            <Button>Shop Now</Button>
-          </InfoContainer>
-        </Slide>
-      </Wrapper>
-      <Arrow direction="right" onClick={() => handleClick("right")}>
-        <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
-      </Arrow>
-    </Container>
-  );
+    const [slideIndex, setSlideIndex] = useState(0);
+    const handleClick = (direction) => {
+
+    }
+
+
+    return (
+        <Container>
+        <Arrow direction="left" onClick={() => handleClick("left")}>
+            <KeyboardArrowLeftIcon></KeyboardArrowLeftIcon>
+        </Arrow>
+        <Wrapper>
+            <Slide bg="#fcf1ed">
+            <ImageContainer>
+                <Image src="https://iili.io/H8Y78Qt.webp"></Image>
+            </ImageContainer>
+            <InfoContainer>
+                <Title>Summer Sale</Title>
+                <Description>
+                    Don&apos;t Compromise on Style! Get A Flat 30% Off For New Arrivals
+                </Description>
+                <Button>Shop Now</Button>
+            </InfoContainer>
+            </Slide>
+        </Wrapper>
+        <Arrow direction="right" onClick={() => handleClick("right")}>
+            <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
+        </Arrow>
+        </Container>
+    );
 };
 
 export default Slider;
