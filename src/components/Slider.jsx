@@ -86,18 +86,20 @@ const Slider = () => {
             <KeyboardArrowLeftIcon></KeyboardArrowLeftIcon>
         </Arrow>
         <Wrapper>
-            <Slide bg="#fcf1ed">
-            <ImageContainer>
-                <Image src="https://iili.io/H8Y78Qt.webp"></Image>
-            </ImageContainer>
-            <InfoContainer>
-                <Title>Summer Sale</Title>
-                <Description>
-                    Don&apos;t Compromise on Style! Get A Flat 30% Off For New Arrivals
-                </Description>
-                <Button>Shop Now</Button>
-            </InfoContainer>
-            </Slide>
+            {sliderItems.map(item=>(
+            <Slide bg={item.bg} key={item.id}>
+                <ImageContainer>
+                    <Image src={item.img}></Image>
+                </ImageContainer>
+                <InfoContainer>
+                    <Title>{item.title}</Title>
+                    <Description>
+                        {item.desc}
+                    </Description>
+                    <Button>Shop Now</Button>
+                </InfoContainer>
+            </Slide>                
+            ))}
         </Wrapper>
         <Arrow direction="right" onClick={() => handleClick("right")}>
             <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
