@@ -4,19 +4,21 @@ import CategoryItem from "./CategoryItem";
 
 const Container = styled.div`
     display: flex;
-    padding: 20px;
+    padding: 0px;
     justify-content: space-between;
+    margin: 0px;
 `
 
 const Categories = () => {
   return (
     <Container>
         {categories.map(item=>(
-            <CategoryItem item={item} key={item.id}>
-            </CategoryItem>
-        ))}
+          <CategoryItem item={item} key={item.id}>
+          </CategoryItem>
+      ))}
     </Container>
   )
+
 }
 
 export default Categories
