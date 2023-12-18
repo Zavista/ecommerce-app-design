@@ -25,27 +25,27 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "../assets/centralamerica.png",
+        img: "https://iili.io/H8Y7lpV.webp",
         title: "Central America",
     },
     {
         id: 2,
-        img: "../assets/southamerica.png",
+        img: "https://iili.io/H8Y5Sgj.webp",
         title: "South America",
     },
     {
         id: 3,
-        img: "../assets/africa.png",
+        img: "https://iili.io/H8Y7VCF.webp",
         title: "Africa",
     },
     {
         id: 4,
-        img: "../assets/asiapacific.png",
+        img: "https://iili.io/H8Y7wYv.webp",
         title: "Asia Pacific",
     },
     {
         id: 5,
-        img: "../assets/middleeast.png",
+        img: "https://iili.io/H8Y7ckQ.webp",
         title: "Middle East",
     },
 ]
