@@ -1,3 +1,10 @@
+import africaImage from "./assets/africa.png"
+import asiaImage from "./assets/asiapacific.png"
+import centralImage from "./assets/centralamerica.png"
+import middleImage from "./assets/middleeast.png"
+import southImage from "./assets/southamerica.png"
+
+
 export const sliderItems = [
     {
         id: 1,
@@ -25,27 +32,27 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://iili.io/H8Y7lpV.webp",
+        img: centralImage,
         title: "Central America",
     },
     {
         id: 2,
-        img: "https://iili.io/H8Y5Sgj.webp",
+        img: southImage,
         title: "South America",
     },
     {
         id: 3,
-        img: "https://iili.io/H8Y7VCF.webp",
+        img: africaImage,
         title: "Africa",
     },
     {
         id: 4,
-        img: "https://iili.io/H8Y7wYv.webp",
+        img: asiaImage,
         title: "Asia Pacific",
     },
     {
         id: 5,
-        img: "https://iili.io/H8Y7ckQ.webp",
+        img: middleImage,
         title: "Middle East",
     },
 ]
