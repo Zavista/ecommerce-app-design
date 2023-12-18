@@ -1,52 +1,56 @@
 import React from "react";
 import styled from "styled-components";
-import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from "@mui/icons-material/Search";
 
 const Container = styled.div`
-  height: 60px;
-  background-color: #fdf7e4;
+    height: 60px;
 `;
 const Wrapper = styled.div`
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
 `;
 const Left = styled.div`
-  flex: 1;
-  display: flex;
-  align-items: center
+    flex: 1;
+    display: flex;
+    align-items: center;
 `;
 const Center = styled.div`
-  flex: 1;
-  display: flex;
-  align-items:center
+    flex: 1;
+    display: flex;
+    align-items: center;
 `;
 const Right = styled.div`
-  flex: 1;
-  display: flex;
-  align-items:center
+    flex: 1;
+    display: flex;
+    align-items: center;
 `;
 
 const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
+    font-size: 14px;
+    cursor: pointer;
 `;
 
 const SearchContainer = styled.div`
     border: 1px solid lightgray;
     display: flex;
-    align-items:center;
+    align-items: center;
     margin-left: 25px;
     padding: 2px 5px;
-`
-
+`;
+const Input = styled.input`
+    border: none;
+`;
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
           <Language>EN</Language>
-          <SearchContainer>search <SearchIcon></SearchIcon></SearchContainer>
+          <SearchContainer>
+            <Input></Input>
+            <SearchIcon></SearchIcon>
+          </SearchContainer>
         </Left>
         <Center>center</Center>
         <Right>right</Right>
