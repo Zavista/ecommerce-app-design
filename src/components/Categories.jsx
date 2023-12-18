@@ -9,6 +9,7 @@ const Container = styled.div`
   align-items: center;
   text-align: center;
   overflow: hidden;
+  margin-bottom: 10px;
 `
 const CategoryContainer = styled.div`
     display: flex;
