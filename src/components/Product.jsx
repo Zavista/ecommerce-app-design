@@ -3,6 +3,21 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
+const Info = styled.div`
+    background-color: #f1eaea;
+    opacity: 0;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: all 0.5s ease;
+`
+
 const Container = styled.div`
     flex: 1;
     margin: 5px;
@@ -13,6 +28,10 @@ const Container = styled.div`
     justify-content: center;
     background-color: #f5fbfd;
     position: relative;
+
+    &:hover ${Info}{
+        opacity: 0.6;
+    }
 `
 const Circle = styled.div`
     width: 300px;
@@ -26,18 +45,6 @@ const Image = styled.img`
     z-index: 2;
 `
 
-const Info = styled.div`
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-
-`
 const Icon = styled.div`
     width: 40px;
     height: 40px;
@@ -47,10 +54,11 @@ const Icon = styled.div`
     align-items: center;
     justify-content: center;
     margin: 10px;
+    transition: transform 0.5s ease;
 
     &:hover{
-        background-color: lightblue;
-        transform: scale(1.5);
+        background-color: lightgreen;
+        transform: scale(1.1);
     }
     
 `
