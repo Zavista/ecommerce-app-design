@@ -30,11 +30,11 @@ const Title = styled.h1`
 `
 const Button = styled.button`
   border: 1px solid black;
-  padding: 10px;
+  padding: 10px 20px;
   background-color: white;
   color: gray;
   cursor: pointer;
-  margin-bottom: 4%;
+  margin-bottom: 5%;
 `
 
 const CategoryItem = ({item}) => {
@@ -43,7 +43,7 @@ const CategoryItem = ({item}) => {
       <Image src={item.img}></Image>
       <Info>
           <Title>{item.title}</Title>
-          <Button>Shop Now</Button>
+          <Button>Explore</Button>
       </Info>
     </Container>
   )
