@@ -4,7 +4,9 @@ import Product from "./Product"
 
 const Container = styled.div`
     padding: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
 `
 const Products = () => {
   const [popularItems, setPopularItems] = useState([]);
@@ -12,7 +14,7 @@ const Products = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://fake-coffee-api.vercel.app/api?limit=10");
+        const response = await fetch("https://fake-coffee-api.vercel.app/api?limit=8");
         const data = await response.json();
         setPopularItems(data);
       } catch (error) {
