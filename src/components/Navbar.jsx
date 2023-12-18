@@ -29,7 +29,7 @@ const SearchContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: 25px;
-    padding: 2px 5px;
+    padding: 5px;
 `;
 const Input = styled.input`
     border: none;
@@ -73,7 +73,7 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input></Input>
-            <SearchIcon></SearchIcon>
+            <SearchIcon style={{color: "gray", fontSize:16}}></SearchIcon>
           </SearchContainer>
         </Left>
         <Center><Logo>Brewtiful</Logo></Center>
