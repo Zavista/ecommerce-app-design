@@ -56,5 +56,3 @@ export const categories = [
         title: "Middle East",
     },
 ]
-
-export const popularItems =  fetch("https://fake-coffee-api.vercel.app/api?limit=10").then((res) => res.json());
