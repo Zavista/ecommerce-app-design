@@ -18,9 +18,13 @@ const Left = styled.div`
 `;
 const Center = styled.div`
   flex: 1;
+  display: flex;
+  align-items:center
 `;
 const Right = styled.div`
   flex: 1;
+  display: flex;
+  align-items:center
 `;
 
 const Language = styled.span`
@@ -31,7 +35,9 @@ const Language = styled.span`
 const SearchContainer = styled.div`
     border: 1px solid lightgray;
     display: flex;
-    align-items:center
+    align-items:center;
+    margin-left: 25px;
+    padding: 2px 5px;
 `
 
 const Navbar = () => {
