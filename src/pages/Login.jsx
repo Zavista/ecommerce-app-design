@@ -6,10 +6,9 @@ const Container = styled.div`
     background: linear-gradient(
         rgba(255, 255, 255, 0.3),
         rgba(255, 255, 255, 0.3)),
-    url(https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-cup-of-latte-on-wooden-table-image_2943328.jpg);
+    url("https://wallpapercave.com/wp/wp6511626.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
     display: flex;
     align-items: center;
     justify-content: center;
