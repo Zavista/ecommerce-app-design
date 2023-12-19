@@ -6,6 +6,10 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const Container = styled.div`
     height: 60px;
     color: #3E2723;
+    border-top: 4px solid #3E2723;
+    border-bottom: 4px solid #3E2723;
+    padding-top: 10px;
+    padding-bottom: 10px;
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
