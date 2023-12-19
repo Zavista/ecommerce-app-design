@@ -38,17 +38,22 @@ const Price = styled.span`
 `
 
 const FilterContainer = styled.div`
-    
+    display: flex;
+    margin: 10px 0px;
+    align-items: center;
 `
 const Filter = styled.select`
-
+    padding: 5px;
+    cursor: pointer;
 `
 
-const FilterTitle = styled.option`
-    
+const FilterTitle = styled.span`
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: 400;
 `
 const FilterOption = styled.option`
-    
+    cursor: pointer;
 `
 
 
@@ -104,18 +109,17 @@ const SingleProduct = () => {
                 <Title>{item[0] && item[0].name}</Title>
                 <Description>{item[0] && item[0].description}</Description>
                 <Price>${item[0] && item[0].price}</Price>
-            </InfoContainer>
-            <FilterContainer>
+                <FilterContainer>
+                <FilterTitle>Grind Option:</FilterTitle>
                 <Filter>
-                    <FilterOption disabled selected>Grind Option</FilterOption>
-                    {["Whole Bean", "French Press", "Cafetiere", "Filter", "Espresso", "Pour Over"].map((option, index) => (
+                    {item[0] && ["Whole Bean", "French Press", "Cafetiere", "Filter", "Espresso", "Pour Over"].map((option, index) => (
                     <FilterOption key={index} disabled={!item[0].grind_option.includes(option)}>
                         {mapGrindToCoarseness(option)}
                     </FilterOption>
                     ))}
                 </Filter>
-
             </FilterContainer>
+            </InfoContainer>
         </Wrapper>
         <Newsletter></Newsletter>
         <Footer></Footer>
