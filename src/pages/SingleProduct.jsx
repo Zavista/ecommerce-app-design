@@ -28,16 +28,15 @@ const Title = styled.h1`
     font-size: 48px;
 `
 const Description = styled.p`
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 25px 0px;
     font-size: 20px;
     letter-spacing: 1px;
 `
 const Flavor = styled.p`
-    margin: 20px 0px;
     font-size: 20px;
     letter-spacing: 1px; 
     font-weight: 700;
+    margin-bottom: 35px;
 `
 
 const Price = styled.span`
@@ -47,7 +46,7 @@ const Price = styled.span`
 
 const FilterContainer = styled.div`
     display: flex;
-    margin: 10px 0px;
+    margin-top: 30%;
     align-items: center;
 `
 const Filter = styled.select`
