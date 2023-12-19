@@ -35,7 +35,6 @@ const ProductList = () => {
   return (
     <Container>
       <Navbar></Navbar>
-      <Announcement></Announcement>
       <Title>Product Listing</Title>
       <FilterContainer>
         <Filter>
