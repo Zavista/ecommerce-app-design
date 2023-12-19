@@ -97,7 +97,7 @@ const SingleProduct = () => {
             return "Medium-Coarse";
           case "Filter":
             return "Medium";
-          case "Expresso":
+          case "Espresso":
             return "Fine";
           case "Pour Over":
             return "Extra-Fine";
