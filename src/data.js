@@ -32,18 +32,18 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
+        img: africaImage,
+        title: "Africa",
+    },
+    {
+        id: 2,
         img: centralImage,
         title: "Central America",
     },
     {
-        id: 2,
+        id: 3,
         img: southImage,
         title: "South America",
-    },
-    {
-        id: 3,
-        img: africaImage,
-        title: "Africa",
     },
     {
         id: 4,
