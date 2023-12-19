@@ -36,6 +36,24 @@ const Price = styled.span`
     font-weight: 400;
     font-size: 40px;
 `
+
+const FilterContainer = styled.div`
+    
+`
+const Filter = styled.select`
+
+`
+
+const FilterTitle = styled.option`
+    
+`
+const FilterOption = styled.option`
+    
+`
+
+
+
+
 const SingleProduct = () => {
     const [item, setItem] = useState([]);
     const id = 1; // Replace this with the dynamic ID you'll receive as a prop
@@ -55,6 +73,26 @@ const SingleProduct = () => {
     }, []);
 
 
+
+    const mapGrindToCoarseness = (option) => {
+        switch (option) {
+          case "Whole Bean":
+            return "Whole Bean";
+          case "French Press":
+            return "Coarse";
+          case "Cafetiere":
+            return "Medium-Coarse";
+          case "Filter":
+            return "Medium";
+          case "Expresso":
+            return "Fine";
+          case "Pour Over":
+            return "Extra-Fine";
+          default:
+            return "None";
+    }}
+
+    console.log(item[0]);
     return (
         <Container>
         <Navbar></Navbar>
@@ -67,6 +105,17 @@ const SingleProduct = () => {
                 <Description>{item[0] && item[0].description}</Description>
                 <Price>${item[0] && item[0].price}</Price>
             </InfoContainer>
+            <FilterContainer>
+                <Filter>
+                    <FilterOption disabled selected>Grind Option</FilterOption>
+                    {["Whole Bean", "French Press", "Cafetiere", "Filter", "Espresso", "Pour Over"].map((option, index) => (
+                    <FilterOption key={index} disabled={!item[0].grind_option.includes(option)}>
+                        {mapGrindToCoarseness(option)}
+                    </FilterOption>
+                    ))}
+                </Filter>
+
+            </FilterContainer>
         </Wrapper>
         <Newsletter></Newsletter>
         <Footer></Footer>
