@@ -4,7 +4,11 @@ import SingleProduct from './pages/SingleProduct'
 
 const App = () => {
   return (
+    <>
+      <Home></Home>
+      <ProductList></ProductList>
     <SingleProduct></SingleProduct>
+    </>
   )
 }
 
