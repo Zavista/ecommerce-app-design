@@ -70,8 +70,6 @@ const ProductList = () => {
                 </Option>
                 <Option>Price (asc)</Option>
                 <Option>Price (desc)</Option>
-                <Option>Roast Level (asc)</Option>
-                <Option>Roast Level (desc)</Option>
             </Select>
         </Filter>
       </FilterContainer>
