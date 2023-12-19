@@ -121,7 +121,7 @@ const Icon = styled.div`
 
 const SingleProduct = () => {
     const [item, setItem] = useState([]);
-    const id = 3; // Replace this with the dynamic ID you'll receive as a prop
+    const id = 9; // Replace this with the dynamic ID you'll receive as a prop
 
     useEffect(() => {
         const fetchData = async () => {
@@ -157,7 +157,6 @@ const SingleProduct = () => {
             return "None";
     }}
 
-    console.log(item[0]);
     return (
         <Container>
         <Navbar></Navbar>
@@ -173,10 +172,13 @@ const SingleProduct = () => {
                 <FilterContainer>
                     <FilterTitle>Grind Option</FilterTitle>
                     <Filter>
-                        {item[0] && ["Whole Bean", "French Press", "Cafetiere", "Filter", "Espresso", "Pour Over"].map((option, index) => (
-                        <FilterOption key={index} disabled={!item[0].grind_option.includes(option)}>
+                    {item[0] &&
+                        ["Whole Bean", "French Press", "Cafetiere", "Filter", "Espresso", "Pour Over"]
+                        .filter(option => item[0].grind_option.includes(option))
+                        .map((option, index) => (
+                            <FilterOption key={index}>
                             {mapGrindToCoarseness(option)}
-                        </FilterOption>
+                            </FilterOption>
                         ))}
                     </Filter>
                 </FilterContainer>
