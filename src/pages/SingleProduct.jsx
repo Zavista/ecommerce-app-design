@@ -52,13 +52,13 @@ const FilterContainer = styled.div`
     display: flex;
     margin-bottom: auto;
     align-items: center;
-    width: 40%;
+    width: 50%;
     margin-bottom: 25px;
 `
 const Filter = styled.select`
     padding: 5px;
     cursor: pointer;
-    flex: 1;
+    flex: 4;
     border: 1px solid teal;
     background-color: white;
 `
@@ -67,26 +67,27 @@ const FilterTitle = styled.span`
     margin-right: 10px;
     font-size: 20px;
     font-weight: 400;
-    flex: 1;
+    flex: 3;
 `
 const FilterOption = styled.option`
     cursor: pointer;
     
 `
 const AddContainer = styled.div`
-    width: 40%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 `
 const AmountContainer = styled.div`
     margin: 0px;
+    margin-right: 10px;
     height: 100%;
     display: flex;
     align-items: center;
     font-weight: 400; 
-    border: 1px solid teal;
-    padding: 5px;
+    border: 2px solid teal;
+    padding: 8px;
 `
 const Amount = styled.span`
     width: 30px;
@@ -104,7 +105,7 @@ const Button = styled.button`
     color: teal;
     cursor: pointer;
     font-weight: 500;
-
+    flex: 1;
     &:hover{
         background-color: teal;
         border: 2px solid white;
@@ -170,7 +171,7 @@ const SingleProduct = () => {
                 <Flavor>Flavor Profile: {item[0] &&item[0].flavor_profile.join(", ")}</Flavor>
                 <Price>${item[0] && item[0].price}</Price>
                 <FilterContainer>
-                    <FilterTitle>Grind Option:</FilterTitle>
+                    <FilterTitle>Grind Option</FilterTitle>
                     <Filter>
                         {item[0] && ["Whole Bean", "French Press", "Cafetiere", "Filter", "Espresso", "Pour Over"].map((option, index) => (
                         <FilterOption key={index} disabled={!item[0].grind_option.includes(option)}>
