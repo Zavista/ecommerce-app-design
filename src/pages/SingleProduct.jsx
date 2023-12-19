@@ -11,7 +11,7 @@ const Wrapper =styled.div`
     display: flex;
 `
 const ImageContainer = styled.div`
-    flex: 1;
+    flex: 3;
 `
 const Image = styled.img`
     width: 100%;
@@ -20,7 +20,7 @@ const Image = styled.img`
     background-color: lightgray;
 `
 const InfoContainer = styled.div`
-    flex: 1;
+    flex: 2;
     padding: 0px 50px;
 `
 const Title = styled.h1`
@@ -28,10 +28,18 @@ const Title = styled.h1`
     font-size: 48px;
 `
 const Description = styled.p`
-    margin: 20px 0px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 20px;
     letter-spacing: 1px;
 `
+const Flavor = styled.p`
+    margin: 20px 0px;
+    font-size: 20px;
+    letter-spacing: 1px; 
+    font-weight: 700;
+`
+
 const Price = styled.span`
     font-weight: 400;
     font-size: 40px;
@@ -108,6 +116,7 @@ const SingleProduct = () => {
             <InfoContainer>
                 <Title>{item[0] && item[0].name}</Title>
                 <Description>{item[0] && item[0].description}</Description>
+                <Flavor>Flavor Profile: {item[0] &&item[0].flavor_profile.join(", ")}</Flavor>
                 <Price>${item[0] && item[0].price}</Price>
                 <FilterContainer>
                 <FilterTitle>Grind Option:</FilterTitle>
