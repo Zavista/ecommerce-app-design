@@ -28,19 +28,20 @@ const Title = styled.h1`
     font-size: 48px;
 `
 const Description = styled.p`
-    margin: 25px 0px;
+    margin-top: 25px;
     font-size: 20px;
     letter-spacing: 1px;
+    min-height: 125px;
 `
 const Flavor = styled.p`
     font-size: 20px;
     letter-spacing: 1px; 
     font-weight: 700;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
 `
 
 const Price = styled.span`
-    font-weight: 400;
+    font-weight: 300;
     font-size: 40px;
 `
 
@@ -68,7 +69,7 @@ const FilterOption = styled.option`
 
 const SingleProduct = () => {
     const [item, setItem] = useState([]);
-    const id = 1; // Replace this with the dynamic ID you'll receive as a prop
+    const id = 3; // Replace this with the dynamic ID you'll receive as a prop
 
     useEffect(() => {
         const fetchData = async () => {
