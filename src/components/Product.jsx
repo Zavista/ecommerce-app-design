@@ -67,7 +67,7 @@ const Product = ({item}) => {
     return (
         <Container>
             <Circle></Circle>
-            <Image src={item.image_url}></Image>
+            <Image src="https://iili.io/H8Y78Qt.webp"></Image>
             <Info>
                 <Icon>
                     <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
