@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { useEffect, useState } from "react";
 import Product from "./Product"
+import {sliderItems} from "../data"
 
 const Container = styled.div`
     padding: 20px;
@@ -25,7 +26,7 @@ const Products = () => {
   }, []);
   return (
     <Container>
-        {popularItems.map(item=>(
+        {sliderItems.map(item=>(
             <Product item={item} key={item._id}></Product>
         ))}
     </Container>
