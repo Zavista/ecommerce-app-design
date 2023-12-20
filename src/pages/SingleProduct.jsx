@@ -14,7 +14,7 @@ const Wrapper =styled.div`
     display: flex;
     ${mobile({
         flexDirection:"column",
-        padding: "20px"
+        padding: "10px"
     })}
 `
 const ImageContainer = styled.div`
