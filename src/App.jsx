@@ -9,11 +9,6 @@ const App = () => {
   return (
     <>
       <Home></Home>
-      <ProductList></ProductList>
-      <SingleProduct></SingleProduct>
-      <Register></Register>
-      <Login></Login>
-      <Cart></Cart>
     </>
   )
 }
