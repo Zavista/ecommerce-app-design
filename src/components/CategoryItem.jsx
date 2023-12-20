@@ -7,7 +7,7 @@ const Container = styled.div`
   margin-bottom: 1%;
   height: 50vh;
   position: relative;  
-  background-color: lightgray;
+  background-color: transparent;
   &:hover{
     transform: scale(1.1);
   }
