@@ -39,7 +39,7 @@ const Bottom = styled.div`
 
 const Info = styled.div`
   flex: 3;
-  background-color: lightblue;
+  background-color: white;
 `;
 const Summary = styled.div`
   flex: 1;
@@ -61,11 +61,13 @@ const Image = styled.img`
 `;
 const ImageContainer = styled.div`
   width: 400px;
-
+  position: relative;
   &:hover {
     transform: scale(1.4);
   }
 `;
+
+
 const Detail = styled.div`
   padding: 20px;
   padding-left: 0px;
@@ -104,12 +106,17 @@ const ProductAmountContainer = styled.div`
     
 `
 const ProductAmount = styled.div`
-    font-size: 24px;
+    font-size: 28px;
     margin: 5px;
 `
 const ProductPrice = styled.div`
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 200;
+`
+const Hr = styled.hr`
+    background-color: #eee;
+    border: none;
+    height: 2px;
 `
 
 const Cart = () => {
@@ -155,6 +162,36 @@ const Cart = () => {
                     <Remove></Remove>
                 </ProductAmountContainer>
                 <ProductPrice>$12.99</ProductPrice>
+              </PriceDetail>
+            </ProductInfo>
+            <Hr></Hr>
+            <ProductInfo>
+              <ProductDetail>
+                <ImageContainer>
+                  <Image src="https://iili.io/H8Y7kTN.webp"></Image>
+                </ImageContainer>
+                <Detail>
+                    <Product>
+                        <ProductName>
+                            <b>Product: </b>Rainforest Rhapsody
+                        </ProductName>
+                        <ProductID>
+                            <b>ID: </b> 234567891
+                        </ProductID> 
+                    </Product>
+
+                  <ProductGrind>
+                    <b>Grind: </b>Fine
+                  </ProductGrind>
+                </Detail>
+              </ProductDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                    <Add></Add>
+                    <ProductAmount>3</ProductAmount>
+                    <Remove></Remove>
+                </ProductAmountContainer>
+                <ProductPrice>$14.99</ProductPrice>
               </PriceDetail>
             </ProductInfo>
           </Info>
