@@ -2,6 +2,7 @@ import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
 import Badge from '@mui/material/Badge';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { mobile } from "../responsive"
 
 const Container = styled.div`
     height: 60px;
@@ -10,11 +11,21 @@ const Container = styled.div`
     border-bottom: 4px solid #3E2723;
     padding-top: 10px;
     padding-bottom: 10px;
+    ${mobile(
+      {
+        padding: "10px 0px"
+      }
+    )}
 `;
 const Wrapper = styled.div`
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
+    ${mobile(
+      {
+       padding: "10px 0px" 
+      }
+    )}
 `;
 
 
@@ -27,6 +38,11 @@ const Left = styled.div`
 const Language = styled.span`
     font-size: 14px;
     cursor: pointer;
+    ${mobile(
+      {
+        display: "none"
+      }
+    )}
 `;
 const SearchContainer = styled.div`
     border: 1px solid lightgray;
@@ -38,6 +54,13 @@ const SearchContainer = styled.div`
 const Input = styled.input`
     border: none;
     outline: none;
+    ${mobile(
+      {
+        width: "40px",
+        height: "16px",
+        marginLeft: "0px"
+      }
+    )}
 `;
 
 
@@ -51,6 +74,12 @@ const Center = styled.div`
 `;
 const Logo = styled.h1`
     font-weight: bold;
+    ${mobile(
+      {
+        fontSize: "24px",
+        marginLeft: "5px"
+      }
+    )}
 `
 
 
@@ -61,11 +90,23 @@ const Right = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    ${mobile(
+      {
+        justifyContent: "center",
+        flex: "2"
+      }
+    )}
 `;
 const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
     margin-right: 25px;
+    ${mobile(
+      {
+        fontSize: "12px",
+        marginRight: "8px",
+      }
+    )}
 `
 
 
@@ -77,13 +118,13 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input></Input>
+            <Input placeholder="Search"></Input>
             <SearchIcon style={{fontSize:16}}></SearchIcon>
           </SearchContainer>
         </Left>
         <Center><Logo>Brewtiful</Logo></Center>
         <Right>
-            <MenuItem>Products</MenuItem>
+        <MenuItem>Products</MenuItem>
             <MenuItem>Register</MenuItem>
             <MenuItem>Sign In</MenuItem>
             <Badge badgeContent={4} color="primary">
