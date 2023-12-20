@@ -4,12 +4,18 @@ import Newsletter from "../components/Newsletter"
 import Footer from "../components/Footer"
 import { useState, useEffect } from "react"
 import { Add, Remove } from "@mui/icons-material"
+import { mobile } from "../responsive"
+
 const Container = styled.div`
     
 `
 const Wrapper =styled.div`
     padding: 50px;
     display: flex;
+    ${mobile({
+        flexDirection:"column",
+        padding: "20px"
+    })}
 `
 const ImageContainer = styled.div`
     flex: 3;
@@ -23,27 +29,45 @@ const Image = styled.img`
 const InfoContainer = styled.div`
     flex: 2;
     padding: 0px 50px;
+    ${mobile({
+        padding:"0px"
+})}
 `
 const Title = styled.h1`
     font-weight: 400;
     font-size: 48px;
+    ${mobile({
+        fontSize: "30px",
+        marginTop: "10px"
+    })}
 `
 const Description = styled.p`
     margin-top: 25px;
     font-size: 20px;
     letter-spacing: 1px;
     min-height: 125px;
+    ${mobile({
+        fontSize:"18px",
+        minHeight:"110px",
+        marginTop:"18px"
+})}
 `
 const Flavor = styled.p`
     font-size: 20px;
     letter-spacing: 1px; 
     font-weight: 700;
     margin-bottom: 15px;
+    ${mobile({
+        fontSize:"18px"
+})}
 `
 
 const Price = styled.span`
     font-weight: 300;
     font-size: 40px;
+    ${mobile({
+        fontSize:"36px"
+})}
 `
 
 
@@ -54,6 +78,10 @@ const FilterContainer = styled.div`
     align-items: center;
     width: 50%;
     margin-bottom: 25px;
+    ${mobile({
+        width:"100%"
+
+})}
 `
 const Filter = styled.select`
     padding: 5px;
@@ -68,6 +96,9 @@ const FilterTitle = styled.span`
     font-size: 20px;
     font-weight: 400;
     flex: 3;
+    ${mobile({
+        fontSize:"18px"
+})}
 `
 const FilterOption = styled.option`
     cursor: pointer;
@@ -78,6 +109,10 @@ const AddContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobile({
+        width:"100%"
+
+})}
 `
 const AmountContainer = styled.div`
     margin: 0px;
@@ -116,6 +151,7 @@ const Icon = styled.div`
     &:hover{
         transform: scale(1.3);
     }
+    
 `
 
 
