@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Add, Remove } from "@mui/icons-material";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -59,10 +60,10 @@ const Image = styled.img`
   object-fit: contain;
 `;
 const ImageContainer = styled.div`
-  width: 300px;
+  width: 400px;
 
   &:hover {
-    transform: scale(1.25);
+    transform: scale(1.4);
   }
 `;
 const Detail = styled.div`
@@ -70,14 +71,46 @@ const Detail = styled.div`
   padding-left: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `;
-const ProductName = styled.span``;
-const ProductID = styled.span``;
-const ProductGrind = styled.span``;
+
+const Product = styled.div`
+    display: flex;
+    flex-direction: column;
+`
+const ProductName = styled.span`
+    font-size: 24px;
+    margin-bottom: 10px;
+`;
+const ProductID = styled.span`
+    font-size: 16px;
+`;
+const ProductGrind = styled.span`
+    font-size: 20px;
+`;
+
 const PriceDetail = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
+
+const ProductAmountContainer = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
+`
+const ProductAmount = styled.div`
+    font-size: 24px;
+    margin: 5px;
+`
+const ProductPrice = styled.div`
+    font-size: 30px;
+    font-weight: 200;
+`
 
 const Cart = () => {
   return (
@@ -101,18 +134,28 @@ const Cart = () => {
                   <Image src="https://iili.io/H8Y78Qt.webp"></Image>
                 </ImageContainer>
                 <Detail>
-                  <ProductName>
-                    <b>Product: </b>Signature Blend
-                  </ProductName>
-                  <ProductID>
-                    <b>ID: </b> 123456789
-                  </ProductID>
+                    <Product>
+                        <ProductName>
+                            <b>Product: </b>Signature Blend
+                        </ProductName>
+                        <ProductID>
+                            <b>ID: </b> 123456789
+                        </ProductID> 
+                    </Product>
+
                   <ProductGrind>
                     <b>Grind: </b> Whole Bean
                   </ProductGrind>
                 </Detail>
               </ProductDetail>
-              <PriceDetail>price</PriceDetail>
+              <PriceDetail>
+                <ProductAmountContainer>
+                    <Add></Add>
+                    <ProductAmount>2</ProductAmount>
+                    <Remove></Remove>
+                </ProductAmountContainer>
+                <ProductPrice>$12.99</ProductPrice>
+              </PriceDetail>
             </ProductInfo>
           </Info>
           <Summary>Summary</Summary>
