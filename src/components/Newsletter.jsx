@@ -1,24 +1,35 @@
 import { Send } from "@mui/icons-material"
 import styled from "styled-components"
+import { mobile } from "../responsive"
 
 const Container = styled.div`
-    height: 29vh;
+    height: 30vh;
     background-color: #fcf5f5;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    ${mobile({
+        height: "50vh"
+  })}
 `
 
 const Title = styled.h1`
     font-size: 70px;
     margin-bottom: 20px;
+    ${mobile({
+        fontSize: "50px"
+  })}
 `
 
 const Description = styled.div`
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 20px;
+    ${mobile({
+        textAlign: "center",
+        fontSize: "18px"
+  })}
 `
 
 const InputContainer = styled.div`
