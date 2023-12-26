@@ -6,7 +6,7 @@ const Container = styled.div`
   margin: 0px;
   height: 50vh;
   position: relative;
-  background-color: transparent;
+  background-color: #fcfdf5;
   &:hover {
     transform: scale(1.2);
   }

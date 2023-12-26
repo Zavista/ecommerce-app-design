@@ -4,13 +4,12 @@ import CategoryItem from "./CategoryItem";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
-  background-color: #fcfdf5;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   overflow: hidden;
-  margin-top: 15px;
   ${mobile({
     padding:"0px"
   })}
@@ -31,6 +30,7 @@ const Title = styled.h1`
   font-weight: 500;
   font-size: 40px;
   margin-top: 40px;
+  margin-bottom: 20px;
   ${mobile({
     fontSize: "28px",
   })}
