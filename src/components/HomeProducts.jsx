@@ -22,7 +22,7 @@ const HomeProducts = () => {
   return (
     <Container>
         <Title>Popular Products</Title>
-        <Products style={{flex:}}></Products>
+        <Products></Products>
     </Container>
   )
 }

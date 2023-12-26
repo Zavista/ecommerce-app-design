@@ -8,6 +8,8 @@ const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    box-sizing: border-box;
+
 `
 const Products = () => {
   const [popularItems, setPopularItems] = useState([]);

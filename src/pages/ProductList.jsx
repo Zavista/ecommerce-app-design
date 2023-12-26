@@ -6,7 +6,8 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import {mobile} from "../responsive"
 
-const Container = styled.div``;
+const Container = styled.div`
+`
 const Title = styled.h1`
   margin: 20px;
 `;
@@ -45,6 +46,7 @@ const Select = styled.select`
 const Option = styled.option`
     
 `
+
 
 const ProductList = () => {
   return (
