@@ -10,7 +10,7 @@ const Container = styled.div`
   align-items: center;
   text-align: center;
   overflow: hidden;
-  border-bottom: 1px solid lightgray;
+  margin-top: 15px;
   ${mobile({
     padding:"0px"
   })}
