@@ -7,17 +7,21 @@ const Container = styled.div`
   height: 50vh;
   position: relative;
   background-color: #fcfdf5;
-  &:hover {
-    transform: scale(1.2);
-  }
   ${mobile({
     height: "30vh",
   })}
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  &:hover{
+    width: 120%;
+    height: 120%
+  }
 `;
 
 const Info = styled.div`
