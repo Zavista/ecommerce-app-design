@@ -10,6 +10,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  border-bottom: 1px solid lightgray;
 
   ${mobile({
     display: "none"
@@ -82,6 +83,7 @@ const Button = styled.button`
   background-color: transparent;
   cursor: pointer;
   letter-spacing: 2px;
+  border: 2px solid black;
 `;
 
 const Slider = () => {

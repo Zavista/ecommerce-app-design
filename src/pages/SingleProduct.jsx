@@ -24,7 +24,7 @@ const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background-color: lightgray;
+    background-color: transparent;
 `
 const InfoContainer = styled.div`
     flex: 2;
