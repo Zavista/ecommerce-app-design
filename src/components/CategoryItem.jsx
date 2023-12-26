@@ -18,9 +18,9 @@ const Image = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  &:hover{
+  &:hover {
     width: 120%;
-    height: 120%
+    height: 120%;
   }
 `;
 
@@ -51,7 +51,6 @@ const Button = styled.button`
   cursor: pointer;
   margin-bottom: 5%;
 `;
-
 
 const CategoryItem = ({ item }) => {
   return (

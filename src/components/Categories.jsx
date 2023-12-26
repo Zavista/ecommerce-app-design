@@ -11,20 +11,19 @@ const Container = styled.div`
   text-align: center;
   overflow: hidden;
   ${mobile({
-    padding:"0px"
+    padding: "0px",
   })}
-  
-`
+`;
 const CategoryContainer = styled.div`
-    width: 100%;
-    display: flex;
-    padding: 0px;
-    justify-content: space-between;
-    margin: 0px;
-    ${mobile({
-      flexDirection:"column"
+  width: 100%;
+  display: flex;
+  padding: 0px;
+  justify-content: space-between;
+  margin: 0px;
+  ${mobile({
+    flexDirection: "column",
   })}
-`
+`;
 
 const Title = styled.h1`
   font-weight: 500;
@@ -34,21 +33,19 @@ const Title = styled.h1`
   ${mobile({
     fontSize: "28px",
   })}
-`
+`;
 
 const Categories = () => {
   return (
     <Container>
       <Title>Discover Our Global Coffee Origins</Title>
-        <CategoryContainer>
-          {categories.map(item=>(
-            <CategoryItem item={item} key={item.id}>
-            </CategoryItem>
+      <CategoryContainer>
+        {categories.map((item) => (
+          <CategoryItem item={item} key={item.id}></CategoryItem>
         ))}
       </CategoryContainer>
     </Container>
-  )
+  );
+};
 
-}
-
-export default Categories
+export default Categories;

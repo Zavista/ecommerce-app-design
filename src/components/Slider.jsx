@@ -12,7 +12,7 @@ const Container = styled.div`
   overflow: hidden;
 
   ${mobile({
-    display: "none"
+    display: "none",
   })}
 `;
 const Arrow = styled.div`
@@ -58,7 +58,7 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 90%; 
+  height: 90%;
 `;
 const InfoContainer = styled.div`
   flex: 1;
@@ -98,7 +98,9 @@ const Slider = () => {
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
-        <KeyboardArrowLeftIcon style={{ fontSize: '4em' }} ></KeyboardArrowLeftIcon>
+        <KeyboardArrowLeftIcon
+          style={{ fontSize: "4em" }}
+        ></KeyboardArrowLeftIcon>
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
@@ -115,7 +117,9 @@ const Slider = () => {
         ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
-        <KeyboardArrowRightIcon style={{ fontSize: '4em' }}></KeyboardArrowRightIcon>
+        <KeyboardArrowRightIcon
+          style={{ fontSize: "4em" }}
+        ></KeyboardArrowRightIcon>
       </Arrow>
     </Container>
   );
