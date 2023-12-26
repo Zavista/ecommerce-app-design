@@ -6,9 +6,8 @@ import { mobile } from "../responsive"
 
 const Container = styled.div`
     height: 60px;
-    color: #3E2723;
-    border-top: 4px solid #3E2723;
-    border-bottom: 4px solid #3E2723;
+    color: black;
+    border-bottom: 4px solid black;
     padding-top: 10px;
     padding-bottom: 10px;
     ${mobile(
@@ -54,6 +53,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
     border: none;
     outline: none;
+
     ${mobile(
       {
         width: "40px",
@@ -74,6 +74,7 @@ const Center = styled.div`
 `;
 const Logo = styled.h1`
     font-weight: bold;
+    color: black;
     ${mobile(
       {
         fontSize: "24px",
