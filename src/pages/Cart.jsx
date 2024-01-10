@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { Add, Remove } from "@mui/icons-material";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
@@ -170,13 +171,14 @@ const Button = styled.button`
 `;
 
 const Cart = () => {
+  const navigate = useNavigate()
   return (
     <Container>
       <Navbar></Navbar>
       <Wrapper>
         <Title>Your Bag</Title>
         <Top>
-          <TopButton>Continue Shopping</TopButton>
+          <TopButton onClick={() => navigate('/')}>Continue Shopping</TopButton>
           <TopTexts>
             <TopText>Shopping Bag (4)</TopText>
             <TopText>Wishlist (0)</TopText>
@@ -188,12 +190,12 @@ const Cart = () => {
             <ProductInfo>
               <ProductDetail>
                 <ImageContainer>
-                  <Image src="https://iili.io/H8Y78Qt.webp"></Image>
+                  <Image src="https://iili.io/H8Y7VCF.webp"></Image>
                 </ImageContainer>
                 <Detail>
                   <Product>
                     <ProductName>
-                      <b>Product: </b>Signature Blend
+                      <b>Product: </b>Ethiopian Yirgacheffe
                     </ProductName>
                     <ProductID>
                       <b>ID: </b> 123456789

@@ -191,7 +191,7 @@ const SingleProduct = () => {
       <Navbar></Navbar>
       <Wrapper>
         <ImageContainer>
-          <Image src="https://iili.io/H8Y78Qt.webp"></Image>
+          <Image src="https://iili.io/H8Y7VCF.webp"></Image>
         </ImageContainer>
         <InfoContainer>
           <Title>{item[0] && item[0].name}</Title>
