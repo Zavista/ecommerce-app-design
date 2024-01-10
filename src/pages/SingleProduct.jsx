@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
 import { Add, Remove } from "@mui/icons-material";
 import { mobile } from "../responsive";
-
+import { useParams } from "react-router-dom";
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 50px;
@@ -148,8 +148,8 @@ const Icon = styled.div`
 `;
 
 const SingleProduct = () => {
-  const [item, setItem] = useState([]);
-  const id = 9; // Replace this with the dynamic ID you'll receive as a prop
+  const [item, setItem] = useState();
+  const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -158,7 +158,8 @@ const SingleProduct = () => {
           `https://fake-coffee-api.vercel.app/api/${id}`,
         );
         const data = await response.json();
-        setItem(data);
+        console.log(data);
+        setItem(data[0]);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -191,19 +192,19 @@ const SingleProduct = () => {
       <Navbar></Navbar>
       <Wrapper>
         <ImageContainer>
-          <Image src="https://iili.io/H8Y7VCF.webp"></Image>
+          <Image src={item && item.image_url}></Image>
         </ImageContainer>
         <InfoContainer>
-          <Title>{item[0] && item[0].name}</Title>
-          <Description>{item[0] && item[0].description}</Description>
+          <Title>{item && item.name}</Title>
+          <Description>{item && item.description}</Description>
           <Flavor>
-            Flavor Profile: {item[0] && item[0].flavor_profile.join(", ")}
+            Flavor Profile: {item && item.flavor_profile}
           </Flavor>
-          <Price>${item[0] && item[0].price}</Price>
+          <Price>${item && item.price}</Price>
           <FilterContainer>
             <FilterTitle>Grind Option</FilterTitle>
             <Filter>
-              {item[0] &&
+              {item &&
                 [
                   "Whole Bean",
                   "French Press",
@@ -212,7 +213,7 @@ const SingleProduct = () => {
                   "Espresso",
                   "Pour Over",
                 ]
-                  .filter((option) => item[0].grind_option.includes(option))
+                  .filter((option) => item.grind_option.includes(option))
                   .map((option, index) => (
                     <FilterOption key={index}>
                       {mapGrindToCoarseness(option)}
