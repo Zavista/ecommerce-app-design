@@ -4,6 +4,9 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { useState } from "react";
 import { sliderItems } from "../data";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
+
+
 const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -95,6 +98,7 @@ const Slider = () => {
     }
   };
 
+  const navigate = useNavigate()
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
@@ -111,7 +115,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Description>{item.desc}</Description>
-              <Button>Shop Now</Button>
+              <Button onClick={() => navigate('/products')}>Shop Now</Button>
             </InfoContainer>
           </Slide>
         ))}

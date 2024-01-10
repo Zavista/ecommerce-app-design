@@ -108,7 +108,7 @@ const Navbar = () => {
           <MenuItem onClick={() => navigate('/products')}>Products</MenuItem>
           <MenuItem onClick={() => navigate('/register')}>Register</MenuItem>
           <MenuItem onClick={() => navigate('/login')}>Sign In</MenuItem>
-          <Badge badgeContent={4} color="primary">
+          <Badge badgeContent={4} color="primary" onClick={() => navigate('/cart')}>
             <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
           </Badge>
         </Right>
