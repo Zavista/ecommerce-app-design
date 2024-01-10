@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Product from "./Product";
 import { sliderItems } from "../data";
 
@@ -28,9 +28,11 @@ const Products = () => {
 
     fetchData();
   }, []);
+
+  const data = useMemo(() => popularItems, [popularItems]);
   return (
     <Container>
-      {popularItems.map((item) => (
+      {data.map((item) => (
         <Product item={item} key={item._id}></Product>
       ))}
     </Container>
