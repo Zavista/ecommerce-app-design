@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -53,6 +54,8 @@ const Button = styled.button`
 `;
 
 const Register = () => {
+  const navigate = useNavigate();
+  
   return (
     <Container>
       <Wrapper>
@@ -68,7 +71,7 @@ const Register = () => {
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>.
           </Agreement>
-          <Button>Create</Button>
+          <Button onClick={() => navigate('/')}>Create</Button>
         </Form>
       </Wrapper>
     </Container>

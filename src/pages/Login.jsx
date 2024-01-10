@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100vw;
@@ -68,6 +69,8 @@ const Link = styled.a`
 `;
 
 const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Wrapper>
@@ -76,8 +79,8 @@ const Login = () => {
           <Input placeholder="username"></Input>
           <Input placeholder="password"></Input>
           <ButtonContainer>
-            <LoginButton>Sign In</LoginButton>
-            <RegisterButton>Register</RegisterButton>
+            <LoginButton onClick={() => navigate('/')}>Sign In</LoginButton>
+            <RegisterButton onClick={() => navigate('/register')}>Register</RegisterButton>
           </ButtonContainer>
 
           <Link>Forgot Password</Link>
