@@ -3,7 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import Badge from "@mui/material/Badge";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { mobile } from "../responsive";
-
+import { useNavigate } from "react-router-dom";
 const Container = styled.div`
   height: 60px;
   color: black;
@@ -89,6 +89,8 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Wrapper>
@@ -100,12 +102,12 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Brewtiful</Logo>
+          <Logo onClick={() => navigate('/')}>Brewtiful</Logo>
         </Center>
         <Right>
-          <MenuItem>Products</MenuItem>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <MenuItem onClick={() => navigate('/products')}>Products</MenuItem>
+          <MenuItem onClick={() => navigate('/register')}>Register</MenuItem>
+          <MenuItem onClick={() => navigate('/login')}>Sign In</MenuItem>
           <Badge badgeContent={4} color="primary">
             <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
           </Badge>
