@@ -17,7 +17,7 @@ const Products = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://fake-coffee-api.vercel.app/api?limit=8",
+          "https://fake-coffee-api.vercel.app/api?limit=20",
         );
         const data = await response.json();
         setPopularItems(data);
@@ -30,7 +30,7 @@ const Products = () => {
   }, []);
   return (
     <Container>
-      {sliderItems.map((item) => (
+      {popularItems.map((item) => (
         <Product item={item} key={item._id}></Product>
       ))}
     </Container>
